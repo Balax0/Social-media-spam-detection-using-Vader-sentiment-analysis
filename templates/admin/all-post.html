@@ -1,0 +1,39 @@
+{% extends "admin/layout.html"%}
+
+{% block content %}
+<div class="container">
+    {% include 'admin/navbar.html' %}
+    <div class="my-2">
+        <form action="" method="POST" style="width:100%">
+            <div class="d-flex align-items-center">
+                <input type="text" name="search" id="search" class="form-control my-1 w-50">
+                <button type="submit" class="btn btn-success " style="margin-left:10px;">Search</button>
+            </div>
+        </form>
+    </div>
+    <div class="my-2">
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Username</th>
+                        <th>Post</th>
+						<th>Spam %</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for fpost in fpost %}
+                    <tr>
+                        <td>{{fpost.id}}</td>
+                        <td>{{fpost.username}}</td>
+                        <td>{{fpost.fpost}}</td><td>{{fpost.score}}%</td>
+                       
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock content %}

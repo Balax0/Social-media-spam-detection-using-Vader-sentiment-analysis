@@ -1,0 +1,59 @@
+{% extends "user/layout.html"%}
+
+{% block content %}
+<div class="container">
+    {% include 'user/navbar.html' %}
+    <h4 class="text-center my-3">
+        Post it!
+    </h4><body>
+    <div class="row d-flex justify-content-center">
+    
+        
+		
+        <form method="POST">
+            <textarea name="text1" placeholder="Say Something: ...." rows="10" cols="109"></textarea><br><br>
+
+            <input class="example_a" type="submit">
+        </form>
+        {% if final %}
+        <div>
+            <h5>The Sentiment of</h5> '{{ text1 }}' <h5>is {{ final *100}}% spam!</h5>
+			<h6>Score table</h6>
+
+
+
+<table style="width:100%">
+  <tr>
+    <th>SENTIMENT METRIC</th>
+    <th>SCORE</th> 
+  </tr>
+  <tr>
+    <td>Positive</td>
+    <td>{{text2}}</td>
+    
+  </tr>
+  <tr>
+    <td>Neutral</td>
+    <td>{{text3}}</td>
+    
+  </tr>
+  <tr>
+    <td>Negative</td>
+    <td>{{text5}}</td>
+    
+  </tr>
+  <tr>
+    <td>Compound</td>
+    <td>{{text4}}</td>
+    
+  </tr>
+</table>
+            {% else %}
+            <p></p>
+            {% endif %}
+        </div>
+</div>
+{% endblock content %}
+    </body>
+</html>
+

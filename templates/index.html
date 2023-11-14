@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Spam Detection</title>
+
+   <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel='stylesheet' type='text/css' />
+<link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel='stylesheet' type='text/css' />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+ <!--[if lt IE 9]>
+     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" type="text/css" media="all" />
+<!-- start plugins -->
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+<!-- start slider -->
+<link href="{{ url_for('static', filename='css/slider.css') }}" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="{{ url_for('static', filename='js/modernizr.custom.28468.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.cslider.js') }}"></script>
+	<script type="text/javascript">
+			$(function() {
+
+				$('#da-slider').cslider({
+					autoplay : true,
+					bgincrement : 450
+				});
+
+			});
+		</script>
+<!-- Owl Carousel Assets -->
+<link href="{{ url_for('static', filename='css/owl.carousel.css') }}" rel="stylesheet">
+<script src="{{ url_for('static', filename='js/owl.carousel.js') }}"></script>
+		<script>
+			$(document).ready(function() {
+
+				$("#owl-demo").owlCarousel({
+					items : 4,
+					lazyLoad : true,
+					autoPlay : true,
+					navigation : true,
+					navigationText : ["", ""],
+					rewindNav : false,
+					scrollPerPage : false,
+					pagination : false,
+					paginationNumbers : false,				})
+
+			});
+		</script>
+		<!-- //Owl Carousel Assets -->
+<!--font-Awesome-->
+   	<link rel="stylesheet" href="{{ url_for('static', filename='fonts/css/font-awesome.min.css') }}">
+<!--font-Awesome-->
+</head>
+
+<body>
+    <div class="container my-5">
+        <div class="d-flex justify-content-center align-items-center">
+            <img style="width: 10%;"
+                src="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"
+                alt="">
+            <h1>
+                Social Media Spam Detection
+            </h1>
+        </div>
+        <hr>
+    </div>
+    <div class="container">
+        
+		 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav">
+		        <li><a href="/user/" class="nav-link text-white">User login</a>
+		
+                    <li>                     <a href="/user/signup" class="nav-link text-white"> User regististration</a></li>
+                    <li><a href="/admin/" class="nav-link text-white">Admin login</a></li>
+                   </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

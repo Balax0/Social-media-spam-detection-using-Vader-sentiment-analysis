@@ -1,0 +1,19 @@
+
+{% extends 'admin/layout.html' %}
+{% block content %}
+<div class="container">
+    {% include 'admin/navbar.html' %}
+</div>
+<div class="container">
+    <div class="row">
+          <h6>Total Users: {{totalUser}}</h6>
+                <h5></h5>
+        
+            
+                <h6>Approved Users: {{totalApprove}}</h6>
+                <h6></h6>
+          <h6>Disapproved Users: {{NotTotalApprove}}</h6>
+                <h6></h6>
+    </div>
+</div>
+{% endblock content %}
